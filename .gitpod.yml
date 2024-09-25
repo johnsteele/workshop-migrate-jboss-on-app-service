@@ -32,4 +32,4 @@ tasks:
   - name: Start Wildfly server
     command: mkdir -p /workspace/deployments && $JBOSS_HOME/bin/standalone.sh -b 0.0.0.0
   - name: Setup Java 
-    command: unset JAVA_TOOL_OPTIONS
+    command: export JAVA_TOOL_OPTIONS=
