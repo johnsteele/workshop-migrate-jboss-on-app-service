@@ -31,3 +31,5 @@ tasks:
     command: docker run -d -p 5432:5432 -e POSTGRES_USER=coolstore -e POSTGRES_PASSWORD=coolstore123 -e POSTGRES_HOST_AUTH_METHOD=md5 -e POSTGRES_DB=monolith postgres
   - name: Start Wildfly server
     command: mkdir -p /workspace/deployments && $JBOSS_HOME/bin/standalone.sh -b 0.0.0.0
+  - name: Setup Java 
+    command: unset JAVA_TOOL_OPTIONS
